@@ -131,7 +131,7 @@ diffmet<-function(data,y){
 
 ## A549
 
-```{r A549,warning=F,message=F}
+```{r A549, message=FALSE, warning=FALSE}
 A549<-diffmet(EMT,"A549")
 
 ggplot(A549,aes(x=foldchange, y=-log10(p.adj), colour=threshold)) +
@@ -151,7 +151,7 @@ subset(A549, p.adj<.05 & abs(foldchange)>1.5)[,1]
 
 ## HCC827
 
-```{r HCC827, warning=FALSE,message=F}
+```{r HCC827, message=FALSE, warning=FALSE}
 HCC827<-diffmet(EMT,"HCC")
 
 ggplot(HCC827,aes(x=foldchange, y=-log10(p.adj), colour=threshold)) +
@@ -171,7 +171,7 @@ subset(HCC827, p.adj<.05 & abs(foldchange)>1.5)[,1]
 
 ## NCI-H358
 
-```{r H358, warning=FALSE,message=F}
+```{r H358, message=FALSE, warning=FALSE}
 H358<-diffmet(EMT,"NCI")
 
 ggplot(H358,aes(x=foldchange, y=-log10(p.adj), colour=threshold)) +
@@ -377,6 +377,5 @@ legend_b <- cowplot::get_legend(
 cowplot::plot_grid(prow, legend_b, ncol = 1, rel_heights = c(1, .1))
 
 
-ggsave("output/HeridaGraphs.png",units = "cm",width = 15,height = 8)
 ```
 
