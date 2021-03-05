@@ -2,9 +2,7 @@
 title: "Metabolomic analysis"
 author: "Meztli Matadamas"
 date: "20/10/2020"
-output:
-  html_document: default
-  pdf_document: default
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
